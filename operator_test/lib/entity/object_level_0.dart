@@ -1,12 +1,9 @@
-import 'dart:convert';
-
 import 'package:flutter/foundation.dart';
 
 import 'object_level_1.dart';
 
-@immutable
 class ObjectLevel0 {
-  const ObjectLevel0(
+  ObjectLevel0(
     this.objects,
   );
 

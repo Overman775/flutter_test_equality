@@ -1,6 +1,3 @@
-import 'package:flutter/foundation.dart';
-
-@immutable
 class ObjectLevel1 {
   final int intVal;
   final String stringVal;
@@ -13,7 +10,7 @@ class ObjectLevel1 {
   final num numVal2;
   final bool boolVal2;
 
-  const ObjectLevel1({
+  ObjectLevel1({
     required this.intVal,
     required this.stringVal,
     required this.doubleVal,
