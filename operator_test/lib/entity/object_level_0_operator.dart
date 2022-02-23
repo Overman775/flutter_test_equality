@@ -1,18 +1,16 @@
 import 'package:flutter/foundation.dart';
 
-import 'object_level_1.dart';
-
-class ObjectLevel0 {
-  ObjectLevel0(
+class ObjectLevel0Operator {
+  ObjectLevel0Operator(
     this.objects,
   );
 
-  final List<ObjectLevel1> objects;
+  final List<Object> objects;
 
-  ObjectLevel0 copyWith({
-    List<ObjectLevel1>? objects,
+  ObjectLevel0Operator copyWith({
+    List<Object>? objects,
   }) {
-    return ObjectLevel0(
+    return ObjectLevel0Operator(
       objects ?? this.objects,
     );
   }
@@ -21,7 +19,7 @@ class ObjectLevel0 {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is ObjectLevel0 && listEquals(other.objects, objects);
+    return other is ObjectLevel0Operator && listEquals(other.objects, objects);
   }
 
   @override

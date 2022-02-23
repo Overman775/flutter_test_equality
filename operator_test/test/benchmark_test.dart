@@ -1,6 +1,6 @@
 import 'package:benchmark_harness/benchmark_harness.dart';
-import 'package:operator_test/entity/object_level_0.dart';
-import 'package:operator_test/entity/object_level_1.dart';
+import 'package:operator_test/entity/object_level_0_operator.dart';
+import 'package:operator_test/entity/object_level_1_operator.dart';
 
 // Create a new benchmark by extending BenchmarkBase
 class TemplateBenchmark extends BenchmarkBase {

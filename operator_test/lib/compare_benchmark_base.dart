@@ -1,37 +1,37 @@
 import 'package:benchmark_harness/benchmark_harness.dart';
 import 'dart:math';
 
-import 'entity/object_level_0.dart';
-import 'entity/object_level_1.dart';
+import 'entity/object_level_0_operator.dart';
+import 'entity/object_level_1_operator.dart';
 
 // Create a new benchmark by extending BenchmarkBase
-class TemplateBenchmark extends BenchmarkBase {
-  TemplateBenchmark() : super('Operator compare');
+class CompareBenchmarkBase extends BenchmarkBase {
+  CompareBenchmarkBase(String name) : super(name);
 
   final random = Random();
 
-  late ObjectLevel0? object1;
-  late ObjectLevel0? object2;
+  late Object? object1;
+  late Object? object2;
 
   bool? result;
 
-  String _generateRandomString(int length) => String.fromCharCodes(
+  String generateRandomString(int length) => String.fromCharCodes(
       List.generate(length, (index) => random.nextInt(33) + 89));
 
-  void _createObjects() {
+  void createObjects() {
     final bool randomBool = random.nextBool();
     final double randomDouble = random.nextDouble();
     final int randomInt = random.nextInt(999999);
     final String randomString =
-        _generateRandomString(random.nextInt(1000) + 100);
+        generateRandomString(random.nextInt(1000) + 100);
 
-    object1 = ObjectLevel0(generateList(
+    object1 = ObjectLevel0Operator(_generateList(
       randomBool,
       randomDouble,
       randomInt,
       randomString,
     ));
-    object2 = ObjectLevel0(generateList(
+    object2 = ObjectLevel0Operator(_generateList(
       randomBool,
       randomDouble,
       randomInt,
@@ -39,17 +39,17 @@ class TemplateBenchmark extends BenchmarkBase {
     ));
   }
 
-  bool _compareTest() => object1 == object2;
+  bool compareTest() => object1 == object2;
 
-  List<ObjectLevel1> generateList(
+  List<ObjectLevel1Operator> _generateList(
     bool randomBool,
     double randomDouble,
     int randomInt,
     String randomString,
   ) =>
-      List<ObjectLevel1>.generate(
+      List<ObjectLevel1Operator>.generate(
         1000,
-        (index) => ObjectLevel1(
+        (index) => ObjectLevel1Operator(
           boolVal: true,
           doubleVal: index.toDouble(),
           intVal: index,
@@ -63,20 +63,16 @@ class TemplateBenchmark extends BenchmarkBase {
         ),
       );
 
-  static void main() {
-    TemplateBenchmark().report();
-  }
-
   // The benchmark code.
   @override
   void run() {
-    result = _compareTest();
+    result = compareTest();
   }
 
   // Not measured setup code executed prior to the benchmark runs.
   @override
   void setup() {
-    _createObjects();
+    createObjects();
   }
 
   // Not measured teardown code executed after the benchmark runs.
@@ -84,18 +80,12 @@ class TemplateBenchmark extends BenchmarkBase {
   void teardown() {
     // print('result: $result');
   }
+
+  // static void main(String name) {
+  //   CompareBenchmark(name).report();
+  // }
 }
 
-main() {
-  // Run TemplateBenchmark
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-  TemplateBenchmark.main();
-}
+Future<void> runBenchmark() async {}
+
+main() async {}
