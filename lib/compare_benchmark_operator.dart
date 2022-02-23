@@ -8,7 +8,7 @@ import 'entity/values_count.dart';
 
 class CompareBenchmarkOperator extends CompareBenchmarkBase {
   CompareBenchmarkOperator(ValuesCount valuesCount)
-      : super('Operator ${valuesCount.name}', valuesCount);
+      : super('Operator', valuesCount);
 
   @override
   void createObjects(ValuesCount valuesCount) {
