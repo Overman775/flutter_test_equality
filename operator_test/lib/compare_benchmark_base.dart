@@ -2,10 +2,13 @@ import 'package:benchmark_harness/benchmark_harness.dart';
 import 'package:operator_test/entity/random_values.dart';
 import 'dart:math';
 
+import 'entity/values_count.dart';
+
 // Create a new benchmark by extending BenchmarkBase
 class CompareBenchmarkBase extends BenchmarkBase {
-  CompareBenchmarkBase(String name) : super(name);
+  CompareBenchmarkBase(String name, this.valuesCount) : super(name);
 
+  final ValuesCount valuesCount;
   final random = Random();
 
   late Object object1;
@@ -23,7 +26,7 @@ class CompareBenchmarkBase extends BenchmarkBase {
         randomString: _generateRandomString(random.nextInt(1000) + 100),
       );
 
-  void createObjects() {
+  void createObjects(ValuesCount valuesCount) {
     throw UnimplementedError();
   }
 
@@ -38,7 +41,7 @@ class CompareBenchmarkBase extends BenchmarkBase {
   // Not measured setup code executed prior to the benchmark runs.
   @override
   void setup() {
-    createObjects();
+    createObjects(valuesCount);
   }
 
   // Not measured teardown code executed after the benchmark runs.

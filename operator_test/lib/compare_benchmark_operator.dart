@@ -2,12 +2,14 @@ import 'compare_benchmark_base.dart';
 import 'entity/object_level_0_operator.dart';
 import 'entity/object_level_1_operator.dart';
 import 'entity/random_values.dart';
+import 'entity/values_count.dart';
 
 class CompareBenchmarkOperator extends CompareBenchmarkBase {
-  CompareBenchmarkOperator() : super('Operator');
+  CompareBenchmarkOperator(ValuesCount valuesCount)
+      : super('Operator', valuesCount);
 
   @override
-  void createObjects() {
+  void createObjects(ValuesCount valuesCount) {
     final randomValues = getRandomValues();
 
     object1 = ObjectLevel0Operator(generateList(randomValues));
@@ -19,5 +21,10 @@ class CompareBenchmarkOperator extends CompareBenchmarkBase {
         (index) => ObjectLevel1Operator.createFromRandom(randomValues),
       );
 
-  static void runBenchmark() => CompareBenchmarkOperator().report();
+  static void runBenchmark5() =>
+      CompareBenchmarkOperator(ValuesCount.values5).report();
+  static void runBenchmark10() =>
+      CompareBenchmarkOperator(ValuesCount.values10).report();
+  static void runBenchmark20() =>
+      CompareBenchmarkOperator(ValuesCount.values20).report();
 }

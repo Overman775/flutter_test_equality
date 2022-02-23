@@ -1,5 +1,7 @@
 // ignore_for_file: avoid_print
 
+import 'package:flutter/cupertino.dart';
+
 import 'compare_benchmark_freezed.dart';
 import 'compare_benchmark_equatable.dart';
 import 'compare_benchmark_operator.dart';
@@ -10,23 +12,22 @@ Future<void> runBenchmark() async {
   print('Wait 3 seconds');
   await Future.delayed(const Duration(seconds: 3));
   print('warming up...');
-  CompareBenchmarkOperator.runBenchmark();
-  CompareBenchmarkEquatable.runBenchmark();
-  CompareBenchmarkFreezed.runBenchmark();
+  CompareBenchmarkOperator.runBenchmark10();
+  CompareBenchmarkEquatable.runBenchmark10();
+  CompareBenchmarkFreezed.runBenchmark10();
   await Future.delayed(const Duration(milliseconds: 100));
-  print('---Operator---');
+
+  await _testLoop(CompareBenchmarkOperator.runBenchmark10, 'Operator');
+  await _testLoop(CompareBenchmarkEquatable.runBenchmark10, 'Equatable');
+  await _testLoop(CompareBenchmarkFreezed.runBenchmark10, 'Freezed');
+
+  print('---Done!---');
+}
+
+Future<void> _testLoop(VoidCallback benchmark, String nameLoop) async {
+  print('---$nameLoop---');
   for (var i = 0; i < 10; i++) {
-    CompareBenchmarkOperator.runBenchmark();
-    await Future.delayed(const Duration(milliseconds: 100));
-  }
-  print('---Equatable---');
-  for (var i = 0; i < 10; i++) {
-    CompareBenchmarkEquatable.runBenchmark();
-    await Future.delayed(const Duration(milliseconds: 100));
-  }
-  print('---Freezed---');
-  for (var i = 0; i < 10; i++) {
-    CompareBenchmarkFreezed.runBenchmark();
-    await Future.delayed(const Duration(milliseconds: 100));
+    benchmark();
+    await Future.delayed(const Duration(milliseconds: 300));
   }
 }
