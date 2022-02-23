@@ -15,7 +15,7 @@ Future<void> runBenchmark() async {
   CompareBenchmarkOperator.runBenchmark10();
   CompareBenchmarkEquatable.runBenchmark10();
   CompareBenchmarkFreezed.runBenchmark10();
-  await Future.delayed(const Duration(milliseconds: 100));
+  await Future.delayed(const Duration(milliseconds: 300));
 
   await _testLoop(CompareBenchmarkOperator.runBenchmark10, 'Operator');
   await _testLoop(CompareBenchmarkEquatable.runBenchmark10, 'Equatable');
