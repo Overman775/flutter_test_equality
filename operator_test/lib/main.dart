@@ -1,40 +1,30 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: avoid_print
 
-void main() {
-  runApp(const MyApp());
-}
+import 'compare_benchmark_freezed.dart';
+import 'compare_benchmark_equatable.dart';
+import 'compare_benchmark_operator.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+void main() async {
+  print('Wait 3 seconds');
+  await Future.delayed(const Duration(seconds: 3));
+  print('warming up...');
+  CompareBenchmarkOperator.runBenchmark();
+  CompareBenchmarkEquatable.runBenchmark();
+  CompareBenchmarkFreezed.runBenchmark();
+  await Future.delayed(const Duration(milliseconds: 100));
+  print('---Operator---');
+  for (var i = 0; i < 10; i++) {
+    CompareBenchmarkOperator.runBenchmark();
+    await Future.delayed(const Duration(milliseconds: 100));
   }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
-        ),
-        body: const SizedBox.shrink());
+  print('---Equatable---');
+  for (var i = 0; i < 10; i++) {
+    CompareBenchmarkEquatable.runBenchmark();
+    await Future.delayed(const Duration(milliseconds: 100));
+  }
+  print('---Freezed---');
+  for (var i = 0; i < 10; i++) {
+    CompareBenchmarkFreezed.runBenchmark();
+    await Future.delayed(const Duration(milliseconds: 100));
   }
 }

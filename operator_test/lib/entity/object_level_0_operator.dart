@@ -1,9 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 class ObjectLevel0Operator {
-  ObjectLevel0Operator(
-    this.objects,
-  );
+  ObjectLevel0Operator(this.objects);
 
   final List<Object> objects;
 

@@ -1,9 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class ObjectLevel0Equatable extends Equatable {
-  ObjectLevel0Equatable(
-    this.objects,
-  );
+  ObjectLevel0Equatable(this.objects);
 
   final List<Object> objects;
 

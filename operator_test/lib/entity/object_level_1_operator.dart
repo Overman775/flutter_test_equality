@@ -1,3 +1,5 @@
+import 'package:operator_test/entity/random_values.dart';
+
 class ObjectLevel1Operator {
   final int intVal;
   final String stringVal;
@@ -84,4 +86,18 @@ class ObjectLevel1Operator {
         numVal2.hashCode ^
         boolVal2.hashCode;
   }
+
+  factory ObjectLevel1Operator.createFromRandom(RandomValues randomValues) =>
+      ObjectLevel1Operator(
+        intVal: randomValues.randomInt,
+        stringVal: randomValues.randomString,
+        doubleVal: randomValues.randomDouble,
+        numVal: randomValues.randomInt,
+        boolVal: randomValues.randomBool,
+        intVal2: randomValues.randomInt,
+        stringVal2: randomValues.randomString,
+        doubleVal2: randomValues.randomDouble,
+        numVal2: randomValues.randomInt,
+        boolVal2: randomValues.randomBool,
+      );
 }

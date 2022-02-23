@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:operator_test/entity/random_values.dart';
 
 class ObjectLevel1Equatable extends Equatable {
   final int intVal;
@@ -64,4 +65,18 @@ class ObjectLevel1Equatable extends Equatable {
         numVal2,
         boolVal2,
       ];
+
+  factory ObjectLevel1Equatable.createFromRandom(RandomValues randomValues) =>
+      ObjectLevel1Equatable(
+        intVal: randomValues.randomInt,
+        stringVal: randomValues.randomString,
+        doubleVal: randomValues.randomDouble,
+        numVal: randomValues.randomInt,
+        boolVal: randomValues.randomBool,
+        intVal2: randomValues.randomInt,
+        stringVal2: randomValues.randomString,
+        doubleVal2: randomValues.randomDouble,
+        numVal2: randomValues.randomInt,
+        boolVal2: randomValues.randomBool,
+      );
 }

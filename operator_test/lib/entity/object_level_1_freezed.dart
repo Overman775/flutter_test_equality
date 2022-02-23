@@ -1,12 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:operator_test/entity/random_values.dart';
 
-import 'object_level_1.dart';
-
 part 'object_level_1_freezed.freezed.dart';
 
 @freezed
-class ObjectLevel1Freezed with _$ObjectLevel1Freezed implements ObjectLevel1 {
+class ObjectLevel1Freezed with _$ObjectLevel1Freezed {
   factory ObjectLevel1Freezed({
     required int intVal,
     required String stringVal,
@@ -20,7 +18,7 @@ class ObjectLevel1Freezed with _$ObjectLevel1Freezed implements ObjectLevel1 {
     required bool boolVal2,
   }) = _ObjectLevel1Freezed;
 
-  factory ObjectLevel1Freezed.create(RandomValues randomValues) =>
+  factory ObjectLevel1Freezed.createFromRandom(RandomValues randomValues) =>
       _ObjectLevel1Freezed(
         intVal: randomValues.randomInt,
         stringVal: randomValues.randomString,
