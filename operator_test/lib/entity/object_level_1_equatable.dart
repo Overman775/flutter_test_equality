@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:operator_test/entity/random_values.dart';
+import 'random_values.dart';
 
 class ObjectLevel1Equatable extends Equatable {
   final int intVal;

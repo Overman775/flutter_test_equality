@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:operator_test/entity/random_values.dart';
+import 'random_values.dart';
 
 part 'object_level_1_freezed.freezed.dart';
 

@@ -4,7 +4,9 @@ import 'compare_benchmark_freezed.dart';
 import 'compare_benchmark_equatable.dart';
 import 'compare_benchmark_operator.dart';
 
-void main() async {
+void main() async => runBenchmark();
+
+Future<void> runBenchmark() async {
   print('Wait 3 seconds');
   await Future.delayed(const Duration(seconds: 3));
   print('warming up...');

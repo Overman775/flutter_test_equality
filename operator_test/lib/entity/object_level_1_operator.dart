@@ -1,4 +1,4 @@
-import 'package:operator_test/entity/random_values.dart';
+import 'random_values.dart';
 
 class ObjectLevel1Operator {
   final int intVal;
