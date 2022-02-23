@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'object_level_1_freezed.dart';
+part of 'object_level_1_freezed_10.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,10 +15,10 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-class _$ObjectLevel1FreezedTearOff {
-  const _$ObjectLevel1FreezedTearOff();
+class _$ObjectLevel1Freezed10TearOff {
+  const _$ObjectLevel1Freezed10TearOff();
 
-  _ObjectLevel1Freezed call(
+  _ObjectLevel1Freezed10 call(
       {required int intVal,
       required String stringVal,
       required double doubleVal,
@@ -29,7 +29,7 @@ class _$ObjectLevel1FreezedTearOff {
       required double doubleVal2,
       required num numVal2,
       required bool boolVal2}) {
-    return _ObjectLevel1Freezed(
+    return _ObjectLevel1Freezed10(
       intVal: intVal,
       stringVal: stringVal,
       doubleVal: doubleVal,
@@ -45,10 +45,10 @@ class _$ObjectLevel1FreezedTearOff {
 }
 
 /// @nodoc
-const $ObjectLevel1Freezed = _$ObjectLevel1FreezedTearOff();
+const $ObjectLevel1Freezed10 = _$ObjectLevel1Freezed10TearOff();
 
 /// @nodoc
-mixin _$ObjectLevel1Freezed {
+mixin _$ObjectLevel1Freezed10 {
   int get intVal => throw _privateConstructorUsedError;
   String get stringVal => throw _privateConstructorUsedError;
   double get doubleVal => throw _privateConstructorUsedError;
@@ -61,15 +61,15 @@ mixin _$ObjectLevel1Freezed {
   bool get boolVal2 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $ObjectLevel1FreezedCopyWith<ObjectLevel1Freezed> get copyWith =>
+  $ObjectLevel1Freezed10CopyWith<ObjectLevel1Freezed10> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ObjectLevel1FreezedCopyWith<$Res> {
-  factory $ObjectLevel1FreezedCopyWith(
-          ObjectLevel1Freezed value, $Res Function(ObjectLevel1Freezed) then) =
-      _$ObjectLevel1FreezedCopyWithImpl<$Res>;
+abstract class $ObjectLevel1Freezed10CopyWith<$Res> {
+  factory $ObjectLevel1Freezed10CopyWith(ObjectLevel1Freezed10 value,
+          $Res Function(ObjectLevel1Freezed10) then) =
+      _$ObjectLevel1Freezed10CopyWithImpl<$Res>;
   $Res call(
       {int intVal,
       String stringVal,
@@ -84,13 +84,13 @@ abstract class $ObjectLevel1FreezedCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ObjectLevel1FreezedCopyWithImpl<$Res>
-    implements $ObjectLevel1FreezedCopyWith<$Res> {
-  _$ObjectLevel1FreezedCopyWithImpl(this._value, this._then);
+class _$ObjectLevel1Freezed10CopyWithImpl<$Res>
+    implements $ObjectLevel1Freezed10CopyWith<$Res> {
+  _$ObjectLevel1Freezed10CopyWithImpl(this._value, this._then);
 
-  final ObjectLevel1Freezed _value;
+  final ObjectLevel1Freezed10 _value;
   // ignore: unused_field
-  final $Res Function(ObjectLevel1Freezed) _then;
+  final $Res Function(ObjectLevel1Freezed10) _then;
 
   @override
   $Res call({
@@ -151,11 +151,11 @@ class _$ObjectLevel1FreezedCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$ObjectLevel1FreezedCopyWith<$Res>
-    implements $ObjectLevel1FreezedCopyWith<$Res> {
-  factory _$ObjectLevel1FreezedCopyWith(_ObjectLevel1Freezed value,
-          $Res Function(_ObjectLevel1Freezed) then) =
-      __$ObjectLevel1FreezedCopyWithImpl<$Res>;
+abstract class _$ObjectLevel1Freezed10CopyWith<$Res>
+    implements $ObjectLevel1Freezed10CopyWith<$Res> {
+  factory _$ObjectLevel1Freezed10CopyWith(_ObjectLevel1Freezed10 value,
+          $Res Function(_ObjectLevel1Freezed10) then) =
+      __$ObjectLevel1Freezed10CopyWithImpl<$Res>;
   @override
   $Res call(
       {int intVal,
@@ -171,15 +171,15 @@ abstract class _$ObjectLevel1FreezedCopyWith<$Res>
 }
 
 /// @nodoc
-class __$ObjectLevel1FreezedCopyWithImpl<$Res>
-    extends _$ObjectLevel1FreezedCopyWithImpl<$Res>
-    implements _$ObjectLevel1FreezedCopyWith<$Res> {
-  __$ObjectLevel1FreezedCopyWithImpl(
-      _ObjectLevel1Freezed _value, $Res Function(_ObjectLevel1Freezed) _then)
-      : super(_value, (v) => _then(v as _ObjectLevel1Freezed));
+class __$ObjectLevel1Freezed10CopyWithImpl<$Res>
+    extends _$ObjectLevel1Freezed10CopyWithImpl<$Res>
+    implements _$ObjectLevel1Freezed10CopyWith<$Res> {
+  __$ObjectLevel1Freezed10CopyWithImpl(_ObjectLevel1Freezed10 _value,
+      $Res Function(_ObjectLevel1Freezed10) _then)
+      : super(_value, (v) => _then(v as _ObjectLevel1Freezed10));
 
   @override
-  _ObjectLevel1Freezed get _value => super._value as _ObjectLevel1Freezed;
+  _ObjectLevel1Freezed10 get _value => super._value as _ObjectLevel1Freezed10;
 
   @override
   $Res call({
@@ -194,7 +194,7 @@ class __$ObjectLevel1FreezedCopyWithImpl<$Res>
     Object? numVal2 = freezed,
     Object? boolVal2 = freezed,
   }) {
-    return _then(_ObjectLevel1Freezed(
+    return _then(_ObjectLevel1Freezed10(
       intVal: intVal == freezed
           ? _value.intVal
           : intVal // ignore: cast_nullable_to_non_nullable
@@ -241,8 +241,8 @@ class __$ObjectLevel1FreezedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ObjectLevel1Freezed implements _ObjectLevel1Freezed {
-  _$_ObjectLevel1Freezed(
+class _$_ObjectLevel1Freezed10 implements _ObjectLevel1Freezed10 {
+  _$_ObjectLevel1Freezed10(
       {required this.intVal,
       required this.stringVal,
       required this.doubleVal,
@@ -277,14 +277,14 @@ class _$_ObjectLevel1Freezed implements _ObjectLevel1Freezed {
 
   @override
   String toString() {
-    return 'ObjectLevel1Freezed(intVal: $intVal, stringVal: $stringVal, doubleVal: $doubleVal, numVal: $numVal, boolVal: $boolVal, intVal2: $intVal2, stringVal2: $stringVal2, doubleVal2: $doubleVal2, numVal2: $numVal2, boolVal2: $boolVal2)';
+    return 'ObjectLevel1Freezed10(intVal: $intVal, stringVal: $stringVal, doubleVal: $doubleVal, numVal: $numVal, boolVal: $boolVal, intVal2: $intVal2, stringVal2: $stringVal2, doubleVal2: $doubleVal2, numVal2: $numVal2, boolVal2: $boolVal2)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _ObjectLevel1Freezed &&
+            other is _ObjectLevel1Freezed10 &&
             const DeepCollectionEquality().equals(other.intVal, intVal) &&
             const DeepCollectionEquality().equals(other.stringVal, stringVal) &&
             const DeepCollectionEquality().equals(other.doubleVal, doubleVal) &&
@@ -315,13 +315,13 @@ class _$_ObjectLevel1Freezed implements _ObjectLevel1Freezed {
 
   @JsonKey(ignore: true)
   @override
-  _$ObjectLevel1FreezedCopyWith<_ObjectLevel1Freezed> get copyWith =>
-      __$ObjectLevel1FreezedCopyWithImpl<_ObjectLevel1Freezed>(
+  _$ObjectLevel1Freezed10CopyWith<_ObjectLevel1Freezed10> get copyWith =>
+      __$ObjectLevel1Freezed10CopyWithImpl<_ObjectLevel1Freezed10>(
           this, _$identity);
 }
 
-abstract class _ObjectLevel1Freezed implements ObjectLevel1Freezed {
-  factory _ObjectLevel1Freezed(
+abstract class _ObjectLevel1Freezed10 implements ObjectLevel1Freezed10 {
+  factory _ObjectLevel1Freezed10(
       {required int intVal,
       required String stringVal,
       required double doubleVal,
@@ -331,7 +331,7 @@ abstract class _ObjectLevel1Freezed implements ObjectLevel1Freezed {
       required String stringVal2,
       required double doubleVal2,
       required num numVal2,
-      required bool boolVal2}) = _$_ObjectLevel1Freezed;
+      required bool boolVal2}) = _$_ObjectLevel1Freezed10;
 
   @override
   int get intVal;
@@ -355,6 +355,6 @@ abstract class _ObjectLevel1Freezed implements ObjectLevel1Freezed {
   bool get boolVal2;
   @override
   @JsonKey(ignore: true)
-  _$ObjectLevel1FreezedCopyWith<_ObjectLevel1Freezed> get copyWith =>
+  _$ObjectLevel1Freezed10CopyWith<_ObjectLevel1Freezed10> get copyWith =>
       throw _privateConstructorUsedError;
 }

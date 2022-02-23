@@ -1,48 +1,108 @@
-## Android emulator
-I/flutter (24504): Operator compare(RunTime): 253.87255648641786 us.
-I/flutter (24504): Operator compare(RunTime): 227.61932400136564 us.
-I/flutter (24504): Operator compare(RunTime): 225.96475372797107 us.
-I/flutter (24504): Operator compare(RunTime): 231.1537039177164 us.
-I/flutter (24504): Operator compare(RunTime): 225.51736189402482 us.
-I/flutter (24504): Operator compare(RunTime): 222.275030558951 us.
-I/flutter (24504): Operator compare(RunTime): 220.76434878587196 us.
-I/flutter (24504): Operator compare(RunTime): 222.02786412078152 us.
-I/flutter (24504): Operator compare(RunTime): 220.4591049382716 us.
-I/flutter (24504): Operator compare(RunTime): 220.12634822804316 us.
+# Android emulator
+## ---Operator 5 values---
+88.94569954638442 us.
+93.83424818203143 us.
+91.84240253478441 us.
+90.16034801424514 us.
+90.0490747827653 us.
+90.25442238267148 us.
+88.35766036402191 us.
+88.91335467235707 us.
+89.32303157518646 us.
+88.76052900190831 us.
 
-## Test
-Operator compare(RunTime): 186.62498833628814 us.
-Operator compare(RunTime): 231.01986601986601 us.
-Operator compare(RunTime): 185.02414431082332 us.
-Operator compare(RunTime): 183.61360506747454 us.
-Operator compare(RunTime): 184.61879268968065 us.
-Operator compare(RunTime): 184.1374516663598 us.
-Operator compare(RunTime): 182.52126300419783 us.
-Operator compare(RunTime): 185.01850138760406 us.
-Operator compare(RunTime): 183.8157338479919 us.
-Operator compare(RunTime): 185.13134024435394 us.
+## ---Operator 10 values---
+172.49141871496334 us.
+165.01584027720486 us.
+165.15763831544177 us.
+165.78267716535433 us.
+164.81089321028347 us.
+166.9313079041816 us.
+165.58145695364237 us.
+165.4472661096865 us.
+166.20442080771147 us.
+165.46467571144936 us.
 
+## ---Operator 20 values---
+275.9195751138088 us.
+278.3077779323779 us.
+274.95999450096235 us.
+276.31634203619285 us.
+274.01890669954787 us.
+275.79950358521785 us.
+275.8109487038058 us.
+275.2886044591247 us.
+275.15394139496493 us.
+277.9809589993051 us.
 
-## Chrome release
-js_primitives.dart:47 Operator compare(RunTime): 200.62192797672785 us.
-js_primitives.dart:47 Operator compare(RunTime): 173.56591165495098 us.
-js_primitives.dart:47 Operator compare(RunTime): 171.64435290078956 us.
-js_primitives.dart:47 Operator compare(RunTime): 181.30901015228426 us.
-js_primitives.dart:47 Operator compare(RunTime): 171.5707300334563 us.
-js_primitives.dart:47 Operator compare(RunTime): 172.2207870489968 us.
-js_primitives.dart:47 Operator compare(RunTime): 170.79419299743807 us.
-js_primitives.dart:47 Operator compare(RunTime): 171.33556069562238 us.
-js_primitives.dart:47 Operator compare(RunTime): 172.02193171067344 us.
-js_primitives.dart:47 Operator compare(RunTime): 171.72671074096334 us.
+## ---Equatable 5 values---
+1290.0090264345583 us.
+1263.9393556538218 us.
+1264.9595448798989 us.
+1267.4866920152092 us.
+1273.9713375796177 us.
+1257.3475801382779 us.
+1276.4467134652202 us.
+1264.0138976626658 us.
+1257.8798742138365 us.
+1273.132399745385 us.
 
-## Real release
-I/flutter ( 7271): Operator compare(RunTime): 337.27740303541316 us.
-I/flutter ( 7271): Operator compare(RunTime): 345.6679917041134 us.
-I/flutter ( 7271): Operator compare(RunTime): 314.94016690284997 us.
-I/flutter ( 7271): Operator compare(RunTime): 318.47229299363056 us.
-I/flutter ( 7271): Operator compare(RunTime): 314.4735849056604 us.
-I/flutter ( 7271): Operator compare(RunTime): 316.48417721518985 us.
-I/flutter ( 7271): Operator compare(RunTime): 316.177205184951 us.
-I/flutter ( 7271): Operator compare(RunTime): 313.19981208894455 us.
-I/flutter ( 7271): Operator compare(RunTime): 312.8462380728922 us.
-I/flutter ( 7271): Operator compare(RunTime): 311.91859014348097 us.
+## ---Equatable 10 values---
+2106.275789473684 us.
+2081.2424557752342 us.
+2084.0989583333335 us.
+2085.514077163712 us.
+2085.13125 us.
+2089.393528183716 us.
+2096.1591623036647 us.
+2083.778125 us.
+2067.585743801653 us.
+2103.9642481598316 us.
+
+## ---Equatable 20 values---
+3580.772808586762 us.
+3632.3466424682397 us.
+3618.723327305606 us.
+3710.7551020408164 us.
+3659.90310786106 us.
+3616.615523465704 us.
+3653.5894160583944 us.
+3619.2079566003617 us.
+3619.5750452079565 us.
+3627.1865942028985 us.
+
+## ---Freezed 5 values---
+1096.501917808219 us.
+1094.3730853391685 us.
+1097.9154774972558 us.
+1094.9704433497536 us.
+1093.574630945872 us.
+1096.9599780701753 us.
+1089.94931880109 us.
+1090.0953678474114 us.
+1093.0546448087432 us.
+1095.0109469074987 us.
+
+## ---Freezed 10 values---
+2000.425 us.
+2008.5010040160641 us.
+2004.9659318637275 us.
+1997.3303393213573 us.
+2004.2204408817636 us.
+2000.718 us.
+2000.916 us.
+2007.7111334002007 us.
+2002.2542542542542 us.
+2008.4538152610442 us.
+
+## ---Freezed 20 values---
+3448.655172413793 us.
+3444.752151462995 us.
+3458.4162348877376 us.
+3439.3865979381444 us.
+3442.609294320138 us.
+3441.218213058419 us.
+3457.435233160622 us.
+3460.4653979238756 us.
+3423.7008547008545 us.
+3445.306368330465 us.

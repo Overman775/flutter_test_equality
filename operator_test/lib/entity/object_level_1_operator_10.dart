@@ -1,6 +1,6 @@
 import 'random_values.dart';
 
-class ObjectLevel1Operator {
+class ObjectLevel1Operator10 {
   final int intVal;
   final String stringVal;
   final double doubleVal;
@@ -12,7 +12,7 @@ class ObjectLevel1Operator {
   final num numVal2;
   final bool boolVal2;
 
-  ObjectLevel1Operator({
+  ObjectLevel1Operator10({
     required this.intVal,
     required this.stringVal,
     required this.doubleVal,
@@ -25,7 +25,7 @@ class ObjectLevel1Operator {
     required this.boolVal2,
   });
 
-  ObjectLevel1Operator copyWith({
+  ObjectLevel1Operator10 copyWith({
     int? intVal,
     String? stringVal,
     double? doubleVal,
@@ -37,7 +37,7 @@ class ObjectLevel1Operator {
     num? numVal2,
     bool? boolVal2,
   }) {
-    return ObjectLevel1Operator(
+    return ObjectLevel1Operator10(
       intVal: intVal ?? this.intVal,
       stringVal: stringVal ?? this.stringVal,
       doubleVal: doubleVal ?? this.doubleVal,
@@ -53,14 +53,14 @@ class ObjectLevel1Operator {
 
   @override
   String toString() {
-    return 'ObjectLevel1Operator(intVal: $intVal, stringVal: $stringVal, doubleVal: $doubleVal, numVal: $numVal, boolVal: $boolVal, intVal2: $intVal2, stringVal2: $stringVal2, doubleVal2: $doubleVal2, numVal2: $numVal2, boolVal2: $boolVal2)';
+    return 'ObjectLevel1Operator10(intVal: $intVal, stringVal: $stringVal, doubleVal: $doubleVal, numVal: $numVal, boolVal: $boolVal, intVal2: $intVal2, stringVal2: $stringVal2, doubleVal2: $doubleVal2, numVal2: $numVal2, boolVal2: $boolVal2)';
   }
 
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is ObjectLevel1Operator &&
+    return other is ObjectLevel1Operator10 &&
         other.intVal == intVal &&
         other.stringVal == stringVal &&
         other.doubleVal == doubleVal &&
@@ -87,8 +87,8 @@ class ObjectLevel1Operator {
         boolVal2.hashCode;
   }
 
-  factory ObjectLevel1Operator.createFromRandom(RandomValues randomValues) =>
-      ObjectLevel1Operator(
+  factory ObjectLevel1Operator10.createFromRandom(RandomValues randomValues) =>
+      ObjectLevel1Operator10(
         intVal: randomValues.randomInt,
         stringVal: randomValues.randomString,
         doubleVal: randomValues.randomDouble,

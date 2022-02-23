@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'random_values.dart';
 
-class ObjectLevel1Equatable extends Equatable {
+class ObjectLevel1Equatable10 extends Equatable {
   final int intVal;
   final String stringVal;
   final double doubleVal;
@@ -13,7 +13,7 @@ class ObjectLevel1Equatable extends Equatable {
   final num numVal2;
   final bool boolVal2;
 
-  ObjectLevel1Equatable({
+  ObjectLevel1Equatable10({
     required this.intVal,
     required this.stringVal,
     required this.doubleVal,
@@ -26,7 +26,7 @@ class ObjectLevel1Equatable extends Equatable {
     required this.boolVal2,
   });
 
-  ObjectLevel1Equatable copyWith({
+  ObjectLevel1Equatable10 copyWith({
     int? intVal,
     String? stringVal,
     double? doubleVal,
@@ -38,7 +38,7 @@ class ObjectLevel1Equatable extends Equatable {
     num? numVal2,
     bool? boolVal2,
   }) {
-    return ObjectLevel1Equatable(
+    return ObjectLevel1Equatable10(
       intVal: intVal ?? this.intVal,
       stringVal: stringVal ?? this.stringVal,
       doubleVal: doubleVal ?? this.doubleVal,
@@ -66,8 +66,8 @@ class ObjectLevel1Equatable extends Equatable {
         boolVal2,
       ];
 
-  factory ObjectLevel1Equatable.createFromRandom(RandomValues randomValues) =>
-      ObjectLevel1Equatable(
+  factory ObjectLevel1Equatable10.createFromRandom(RandomValues randomValues) =>
+      ObjectLevel1Equatable10(
         intVal: randomValues.randomInt,
         stringVal: randomValues.randomString,
         doubleVal: randomValues.randomDouble,

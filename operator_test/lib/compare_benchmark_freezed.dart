@@ -1,6 +1,8 @@
 import 'compare_benchmark_base.dart';
 import 'entity/object_level_0_freezed.dart';
-import 'entity/object_level_1_freezed.dart';
+import 'entity/object_level_1_freezed_10.dart';
+import 'entity/object_level_1_freezed_20.dart';
+import 'entity/object_level_1_freezed_5.dart';
 import 'entity/random_values.dart';
 import 'entity/values_count.dart';
 
@@ -12,13 +14,24 @@ class CompareBenchmarkFreezed extends CompareBenchmarkBase {
   void createObjects(ValuesCount valuesCount) {
     final randomValues = getRandomValues();
 
-    object1 = ObjectLevel0Freezed(generateList(randomValues));
-    object2 = ObjectLevel0Freezed(generateList(randomValues));
+    object1 = ObjectLevel0Freezed(generateList(randomValues, valuesCount));
+    object2 = ObjectLevel0Freezed(generateList(randomValues, valuesCount));
   }
 
-  List<Object> generateList(RandomValues randomValues) => List<Object>.generate(
+  List<Object> generateList(
+          RandomValues randomValues, ValuesCount valuesCount) =>
+      List<Object>.generate(
         1000,
-        (index) => ObjectLevel1Freezed.createFromRandom(randomValues),
+        (index) {
+          switch (valuesCount) {
+            case ValuesCount.values5:
+              return ObjectLevel1Freezed5.createFromRandom(randomValues);
+            case ValuesCount.values10:
+              return ObjectLevel1Freezed10.createFromRandom(randomValues);
+            case ValuesCount.values20:
+              return ObjectLevel1Freezed20.createFromRandom(randomValues);
+          }
+        },
       );
 
   static void runBenchmark5() =>

@@ -1,7 +1,8 @@
-import 'package:operator_test/entity/object_level_0_equatable.dart';
-
 import 'compare_benchmark_base.dart';
-import 'entity/object_level_1_equatable.dart';
+import 'entity/object_level_0_equatable.dart';
+import 'entity/object_level_1_equatable_10.dart';
+import 'entity/object_level_1_equatable_20.dart';
+import 'entity/object_level_1_equatable_5.dart';
 import 'entity/random_values.dart';
 import 'entity/values_count.dart';
 
@@ -13,15 +14,25 @@ class CompareBenchmarkEquatable extends CompareBenchmarkBase {
   void createObjects(ValuesCount valuesCount) {
     final randomValues = getRandomValues();
 
-    object1 = ObjectLevel0Equatable(generateList(randomValues));
-    object2 = ObjectLevel0Equatable(generateList(randomValues));
+    object1 = ObjectLevel0Equatable(generateList(randomValues, valuesCount));
+    object2 = ObjectLevel0Equatable(generateList(randomValues, valuesCount));
   }
 
-  List<Object> generateList(RandomValues randomValues) => List<Object>.generate(
+  List<Object> generateList(
+          RandomValues randomValues, ValuesCount valuesCount) =>
+      List<Object>.generate(
         1000,
-        (index) => ObjectLevel1Equatable.createFromRandom(randomValues),
+        (index) {
+          switch (valuesCount) {
+            case ValuesCount.values5:
+              return ObjectLevel1Equatable5.createFromRandom(randomValues);
+            case ValuesCount.values10:
+              return ObjectLevel1Equatable10.createFromRandom(randomValues);
+            case ValuesCount.values20:
+              return ObjectLevel1Equatable20.createFromRandom(randomValues);
+          }
+        },
       );
-
   static void runBenchmark5() =>
       CompareBenchmarkEquatable(ValuesCount.values5).report();
   static void runBenchmark10() =>
